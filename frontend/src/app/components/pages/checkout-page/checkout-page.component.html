@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="content">
+    <app-title title="Formulário" fontSize="1.6rem"></app-title>
+    <form [formGroup]="checkoutForm">
+      <text-input [control]="fc.name" label="Nome"></text-input>
+      <text-input [control]="fc.address" label="Endereço"></text-input>
+    </form>
+   <order-items-list [order]="order"></order-items-list>
+  </div>
+  <div class="map">
+    <app-title
+    title="Encontra a tua localização no Mapa"
+    fontSize="1.6rem"></app-title>
+    <map [order]="order"></map>
+  </div>
+
+  <div class="buttons-container">
+    <div class="buttons">
+      <button (click)="createOrder()">
+         Ir para o Pagamento
+      </button>
+    </div>
+  </div>
+
+</div>
